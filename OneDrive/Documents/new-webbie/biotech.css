@@ -134,3 +134,37 @@ button {
 button:hover {
     background-color: #ff5a3d;
 }
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #1a73e8;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #155ab6;
+}
+
+.subscribe-btn {
+    background-color: #28a745;
+}
+
+.subscribe-btn:hover {
+    background-color: #218838;
+}
+
+.footer-note {
+    font-size: 0.9rem;
+    margin-top: 30px;
+    color: #555;
+}
