@@ -8,6 +8,9 @@ body {
     color: #5A4631;
 }
 
+html {
+    background-color: #F99762;
+}
 /* Animated Background: Calming Waves */
 .animated-waves {
     position: fixed;
@@ -40,7 +43,7 @@ body {
     max-width: 600px;
     margin: 150px auto;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.75); /* Semi-transparent */
+    background: #F0F8EA;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
