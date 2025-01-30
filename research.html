@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCircuit Research</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffc8dd;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.6rem;
+            margin-bottom: 15%;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .research-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .research-box {
+            background: #bde0fe;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        .research-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            body {
+                height: auto;
+                display: block;
+            }
+            .research-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .research-box {
+                width: 90%;
+                max-width: 300px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Research Work</h1>
+        <div class="research-grid">
+            <a href="precise.html" target="_blank"><div class="research-box">
+                <h2>Neuroscience, Chemical Principles and Consciousness</h2>
+                <p>Exploration of the link between neuroanatomy, Chemistry, and electromagnetic interactions encouraging an
+                    Indepth look into the connection between multiple fields. </p>
+            </div>
+            </a>
+            <a href="https://www.researchgate.net/publication/388485144_Mycelium_and_MultiElectrode_Arrays" target="_blank"><div class="research-box">
+                <h2>Mycelium and MultiElectrode Arrays</h2>
+                <p> How Mycelium can be used with MultiElectrode Arrays to Detect neuronal Activity</p>
+            </div>
+        </a>
+        <a href="https://www.researchgate.net/publication/380732614_Health_Disparities_and_Reporting_Gaps_in_Artificial_Intelligence_AI_Enabled_Medical_Devices_A_Scoping_Review_of_692_US_Food_and_Drug_Administration_FDA_510k_Approvals" target="_blank"><div class="research-box">
+                <h2>Artificial Intelligence In Medical Devices</h2>
+                <p>Health Disparities and Reporting Gaps in Artificial Intelligence (AI) Enabled Medical Devices</p>
+            </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -14,6 +14,10 @@ h1 {
     margin: 0 auto 40px;
 }
 
+.fa-newspaper-o {
+    background: #80abc7;
+}
+
 .landing-page-container {
     width: 100%;
     min-height: 100%;
