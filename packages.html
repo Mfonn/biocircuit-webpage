@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precision Medicine to Precision Care</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #eef2f6, #d4dee8);
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header {
+     text-align: center;
+    padding: 2rem 1rem;
+    background: #2e294e;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 300px;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #005792;
+      font-weight: bold;
+    }
+
+    .content {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .list {
+      text-align: left;
+      margin-top: 1rem;
+    }
+
+    .list li {
+      margin-bottom: 0.5rem;
+      list-style: none;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #005792;
+      font-weight: bold;
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background: url('drop.webp');
+      animation: wave 5s infinite linear;
+      opacity: 0.5;
+    }
+
+
+ .fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    background-color: #2e294e;
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.fixed-top a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.fixed-top a:hover {
+  color: #FFD700;
+}
+
+footer a:hover {
+  color: #0056b3;
+}
+
+    @keyframes wave {
+      0% {
+        background-position-x: 0;
+      }
+      100% {
+        background-position-x: 1000px;
+      }
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header></header>
+
+  <section class="container">
+    <!-- Jade Package -->
+    <div class="card">
+      <div class="title">A</div>
+      <div class="content">
+        <p><strong></strong></p>
+        <ul class="list">
+          <li>One 45-minute Consultation Call</li>
+          <li>Follow-Up Research Results</li>
+          <li>Follow-Up Call - 28 Day Cycle</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sapphire Package -->
+    <div class="card">
+      <div class="title">B</div>
+      <div class="content">
+        <p><strong></strong></p>
+        <ul class="list">
+          <li>Two 45-minute Consultation Calls</li>
+          <li>Follow-Up Research Results</li>
+          <li>Three Follow-Up Calls - 84 Day Cycle</li>
+          <li>Map To North-Star</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ruby Package -->
+    <div class="card">
+      <div class="title">C</div>
+      <div class="content">
+        <p><strong></strong></p>
+        <ul class="list">
+          <li>168 Day Cycle</li>
+          <li>180 Life-Change</li>
+          <li>Six Follow-Up Calls - 168 Day Cycle</li>
+          <li>Personalized Map To North-Star and Guide</li>
+          <li>Break In Emergency Calls</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div class="fixed-top">
+    <a href="https://selar.co/l78444">Schedule</a>
+  </div>
+
+  <footer>
+    <div class="fixed-top">
+        <a href="https://selar.co/l78444">Schedule</a>
+      </div>
+    
+  </footer>
+</body>
+</html>
