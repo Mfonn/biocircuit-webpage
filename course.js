@@ -18,13 +18,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // ✅ Get Firebase services
-const auth = firebase.auth();
+const auth = getAuth(app);
 const db = firebase.firestore();
 
 // ✅ Sign Up Function
 function signUp() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    
 
     auth.createUserWithEmailAndPassword(email, password)
         .then(userCredential => {
