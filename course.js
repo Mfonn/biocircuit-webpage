@@ -1,53 +1,55 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDaZKOdfFpX3iBxUffRhp-QQdOBQK3__AQ",
-  authDomain: "womb-intelligence-lms.firebaseapp.com",
-  projectId: "womb-intelligence-lms",
-  storageBucket: "womb-intelligence-lms.firebasestorage.app",
-  messagingSenderId: "442314888776",
-  appId: "1:442314888776:web:5d22fc60750d00e0232a7d"
+    apiKey: "AIzaSyDaZKOdfFpX3iBxUffRhp-QQdOBQK3__AQ",
+    authDomain: "womb-intelligence-lms.firebaseapp.com",
+    projectId: "womb-intelligence-lms",
+    storageBucket: "womb-intelligence-lms.firebasestorage.app",
+    messagingSenderId: "442314888776",
+    appId: "1:442314888776:web:5d22fc60750d00e0232a7d"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// initialize firebase
+firebase.initializeApp(firebaseConfig);
 
-// ✅ Get Firebase services
-const auth = getAuth(app);
-const db = firebase.firestore();
+// reference your database
+var contactFormDB = firebase.database().ref("contactForm");
 
-// ✅ Sign Up Function
-function signUp() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    
+document.getElementById("contactForm").addEventListener("submit", submitForm);
 
-    auth.createUserWithEmailAndPassword(email, password)
-        .then(userCredential => {
-            alert("Sign-up successful!");
-        })
-        .catch(error => {
-            alert(error.message);
-        });
+function submitForm(e) {
+  e.preventDefault();
+
+  var name = getElementVal("name");
+  var emailid = getElementVal("emailid");
+  var msgContent = getElementVal("msgContent");
+
+  saveMessages(name, emailid, msgContent);
+
+  //   enable alert
+  document.querySelector(".alert").style.display = "block";
+
+  //   remove the alert
+  setTimeout(() => {
+    document.querySelector(".alert").style.display = "none";
+  }, 3000);
+
+  //   reset the form
+  document.getElementById("contactForm").reset();
 }
 
-// ✅ Log In Function
-function logIn() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+const saveMessages = (name, emailid, msgContent) => {
+  var newContactForm = contactFormDB.push();
 
-    auth.signInWithEmailAndPassword(email, password)
-        .then(userCredential => {
-            document.getElementById("auth").style.display = "none";
-            document.getElementById("course-content").style.display = "block";
-        })
-        .catch(error => {
-            alert(error.message);
-        });
-}
+  newContactForm.set({
+    name: name,
+    emailid: emailid,
+    msgContent: msgContent,
+  });
+};
 
+const getElementVal = (id) => {
+  return document.getElementById(id).value;
+};

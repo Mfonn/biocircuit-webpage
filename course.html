@@ -14,12 +14,26 @@
 </head>
 <body>
 
-    <div id="auth">
-        <h2>Sign Up</h2>
-        <input type="email" id="email" placeholder="Enter email">
-        <input type="password" id="password" placeholder="Enter password">
-        <button onclick="signUp()">Sign Up</button>
-        <button onclick="logIn()">Log In</button>
+    <div class="container">
+        <form action="" id="contactForm">
+            <div class="alert">Your message sent</div>
+
+            <div class="inputBox">
+                <input type="text" id="name" placeholder="Your name...." />
+            </div>
+
+            <div class="inputBox">
+                <input type="email" id="emailid" placeholder="Your Email....." />
+            </div>
+
+            <div class="inputBox">
+                <textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
     </div>
 
     <div id="course-content" style="display: none;">
@@ -28,6 +42,7 @@
     </div>
 
     
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.7.1/firebase.js"></script>
+    <script src="course.js"></script>
 </body>
 </html>
