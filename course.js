@@ -1,55 +1,35 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
 
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+  import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-const firebaseConfig = {
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
     apiKey: "AIzaSyDaZKOdfFpX3iBxUffRhp-QQdOBQK3__AQ",
     authDomain: "womb-intelligence-lms.firebaseapp.com",
     projectId: "womb-intelligence-lms",
     storageBucket: "womb-intelligence-lms.firebasestorage.app",
     messagingSenderId: "442314888776",
     appId: "1:442314888776:web:5d22fc60750d00e0232a7d"
-};
+  };
 
-// initialize firebase
-firebase.initializeApp(firebaseConfig);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
 
-// reference your database
-var contactFormDB = firebase.database().ref("contactForm");
+    //get ref to database services
+    const db = getDatabase(app);
 
-document.getElementById("contactForm").addEventListener("submit", submitForm);
+    document.getElementById("submit").addEventListener('click', function(e){
+     e.preventDefault();
+     set(ref(db, 'user/' + document.getElementById("username").value),
+     {
 
-function submitForm(e) {
-  e.preventDefault();
+       username: document.getElementById("username").value,
+       email: document.getElementById("email").value,
+       PhoneNumber: document.getElementById("phone").value
 
-  var name = getElementVal("name");
-  var emailid = getElementVal("emailid");
-  var msgContent = getElementVal("msgContent");
-
-  saveMessages(name, emailid, msgContent);
-
-  //   enable alert
-  document.querySelector(".alert").style.display = "block";
-
-  //   remove the alert
-  setTimeout(() => {
-    document.querySelector(".alert").style.display = "none";
-  }, 3000);
-
-  //   reset the form
-  document.getElementById("contactForm").reset();
-}
-
-const saveMessages = (name, emailid, msgContent) => {
-  var newContactForm = contactFormDB.push();
-
-  newContactForm.set({
-    name: name,
-    emailid: emailid,
-    msgContent: msgContent,
-  });
-};
-
-const getElementVal = (id) => {
-  return document.getElementById(id).value;
-};
+     });
+       alert("Login Sucessfull  !");
+    })
