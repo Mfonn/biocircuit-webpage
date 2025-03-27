@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Research Project</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; background-color: #f0f8ff; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .progress-bar { width: 100%; background-color: #ddd; border-radius: 5px; margin: 20px 0; overflow: hidden; }
+        .progress { height: 20px; width: 0%; background-color: #4CAF50; text-align: center; color: white; line-height: 20px; border-radius: 5px; transition: width 0.5s; }
+        .task-list { list-style-type: none; padding: 0; }
+        .task { padding: 10px; margin: 5px 0; background-color: #e3f2fd; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; }
+        button { padding: 5px 10px; cursor: pointer; background-color: #0288d1; color: white; border: none; border-radius: 5px; }
+        button:hover { background-color: #0277bd; }
+        form { margin-top: 20px; padding: 15px; background: #f1f8e9; border-radius: 5px; }
+        input, textarea { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; }
+        .meeting-info { background: #ffecb3; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Water Research Project</h1>
+        <p>This is Our First Ever Open Research Paper and the Goal is to scientifically observe and investigate the knowledge about water.</p>
+        
+        <h3>Steps</h3>
+        <ul>
+            <li>Select A Task You Are Interested In</li>
+            <li>Fill the Form</li>
+            <li>Template of the Research Work will be sent to your email</li>
+            <li>Research ❤️</li>
+            <li>Submit</li>
+            <li>Wait for Published paper or pick another task 😄 </li>
+        </ul>
+
+        <h2>Research Progress</h2>
+        <div class="progress-bar">
+            <div class="progress" id="progress-bar">0%</div>
+        </div>
+        
+        <h2>Weekly Research Focus</h2>
+        <ul>
+            <li><strong>Week 1:</strong> Water movement in the Body and around the Body, evolution theories, mythology</li>
+            <li><strong>Week 2:</strong> Water defying Natural Laws, Water as currency, Water and Electricity</li>
+            <li><strong>Week 3:</strong> Water in soil, Water In Water, Water memory</li>
+            <li><strong>Week 4:</strong> First Draft; water & salt, Water and Seasonal changes, Water and Rabies</li>
+            <li><strong>Week 5:</strong> Final Draft; Healing Properties Of Water, Water Movement- evaporation, condensation, precipiration</li>
+            <li><strong>Week 6:</strong> Final Edits & Publishing</li>
+        </ul>
+        
+        <h2>Available Research Tasks</h2>
+        <ul class="task-list" id="task-list">
+            <li class="task">Water Movement In The Body and Around The Body<button onclick="assignTask(this)">Assign to Me</button></li>
+            <li class="task">Evolution Theories of Water <button onclick="assignTask(this)">Assign to Me</button></li>
+            <li class="task">Mythology around Water <button onclick="assignTask(this)">Assign to Me</button></li>
+        </ul>
+        
+        <h2>Join a Research Task</h2>
+        <form action="https://formsubmit.co/biocircuitlaboratories@gmail.com" method="POST" id="task-form">
+            <label>Why are you interested?</label><br>
+            <textarea rows="3" id="interest"></textarea><br><br>
+
+            <label>Your current satisfaction level in life (1-10):</label><br>
+            <input type="number" min="1" max="10" id="satisfaction"><br><br>
+
+            <label>Time commitment per week (hours):</label><br>
+            <input type="number" min="1" id="commitment"><br><br>
+            
+            <label>Email:</label><br>
+            <input type="email" id="email"><br><br>
+        
+            <button type="submit">Submit</button>
+           
+        </form>
+        
+        <h2>Weekly Meetings</h2>
+        <div class="meeting-info">
+            <p><strong>When:</strong> Saturdays, 4-5 PM </p>
+        </div>
+    </div>
+    
+    <script>
+        function assignTask(button) {
+            let task = button.parentElement;
+            task.style.backgroundColor = '#c8e6c9';
+            button.innerText = 'Assigned';
+            button.disabled = true;
+            document.getElementById("task-form").scrollIntoView({ behavior: "smooth" });
+        }
+        
+        function updateProgress() {
+            const startDate = new Date('2025-04-14');
+            const endDate = new Date('2025-05-30');
+            const today = new Date();
+            
+            if (today < startDate) {
+                document.getElementById("progress-bar").style.width = "0%";
+                document.getElementById("progress-bar").innerText = "0%";
+            } else if (today > endDate) {
+                document.getElementById("progress-bar").style.width = "100%";
+                document.getElementById("progress-bar").innerText = "100%";
+            } else {
+                const progress = Math.round(((today - startDate) / (endDate - startDate)) * 100);
+                document.getElementById("progress-bar").style.width = progress + "%";
+                document.getElementById("progress-bar").innerText = progress + "%";
+            }
+        }
+        
+        window.onload = updateProgress;
+    </script>
+</body>
+</html>
