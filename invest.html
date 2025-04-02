@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.svg" type="image/icon type">
     <title>Invest us | BioCircuit</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <style>
@@ -115,7 +116,7 @@
 
     <header>
         <h1>Building The Future</h1>
-        <p>Join us in pioneering Personalized Medical Technology.</p>
+        <p>Join us in pioneering Personalized Biotechnology.</p>
     </header>
 
     <section class="glass about">
@@ -126,21 +127,21 @@
 
     <section class="glass steps">
         <h2>How We Are Making It Happen</h2>
-        <ul>
-            <li>Research and Education</li>
-            <li>Customized Precision Medical Devices </li>
-            <li>Bridging Holistic and Technological health approaches</li>
-        </ul>
+        
+            <p>Research and Education</p>
+            <p>Customized Precision Medical Devices </p>
+            <p>Bridging Holistic and Technological health approaches</p>
+
     </section>
 
     <section class="glass invest-form">
         <h2>Become an Investor</h2>
         <p>Be part of this movement. Fill out the form below:</p>
-        <form action="https://formsubmit.co/biocircuitlaboratories@gmail.com" method="POST" id="task-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="What pulled you to our company?" required></textarea>
-            <select required>
+        <form action="https://formsubmit.co/biocircuitlaboratories@gmail.com" method="POST" id="task-form contactForm">
+            <input type="text" placeholder="Your Name" id="name" required>
+            <input type="email" placeholder="Your Email" id="emailid" required>
+            <textarea placeholder="What pulled you to our company?" id="msgContent" required></textarea>
+            <select id="selection" required>
                 <option value="">Select Investment Range</option>
                 <option value="5k-25k">$5K - $25K</option>
                 <option value="25k-250k">$25K - $250K</option>
@@ -159,6 +160,8 @@
             });
         });
     </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      <script src="invest.js"></script>
 
 </body>
 </html>
