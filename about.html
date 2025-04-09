@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About the Founder – BioCircuit Laboratories</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f1115;
+      color: #ffffff;
+      line-height: 1.8;
+      padding: 0 1rem;
+    }
+
+    .about-section {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #1a1d24;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .about-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .about-header img {
+      max-height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .about-founder {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .founder-photo {
+      flex: 1;
+      max-width: 300px;
+    }
+
+    .founder-photo img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+    }
+
+    .founder-info {
+      flex: 2;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #00f0ff;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: #ff86d1;
+      margin-top: 2rem;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #a5b4fc;
+      border-left: 4px solid #00f0ff;
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #dddddd;
+    }
+      /* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    height: 12%;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    margin: 10px 0;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #A2C3A4;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.social-icons li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #bbb;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+    @media (max-width: 768px) {
+      .about-founder {
+        flex-direction: column;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="about-section">
+
+  <!-- HEADER SECTION -->
+  <div class="about-header">
+    <img src="logo-noname.svg" alt="BioCircuit Laboratories Logo" />
+    <h2>About the Founder – Dr. Mfon Nta</h2>
+  </div>
+
+  <!-- FOUNDER SECTION -->
+  <div class="about-founder">
+    <div class="founder-photo">
+      <img src="founder.jpg" alt="Dr. Mfon Nta" />
+    </div>
+    <div class="founder-info">
+      <p>
+        Dr. Mfon Nta is a multidisciplinary thinker, researcher, and visionary educator who bridges science, design, and the human experience. With a foundation in medicine, a journey through software engineering, and a passion for biotechnology and integrated learning, Mfon’s work is rooted in a powerful belief:
+      </p>
+      <p class="quote">
+        “High quality of life is attainable through intentional decisions, integrated knowledge, body awareness, and optimized technology.”
+      </p>
+      <p>
+        Mfon approaches innovation through the lens of academic curiosity and artistic intentionality. Her work blends scientific method, systems thinking, visual storytelling, and intuitive intelligence to solve real-world problems in health and biotechnology.
+      </p>
+      <p>
+        Influenced by principles in graphic design, neuroscience, and philosophy, she designs programs that empower individuals to learn how to think, not just what to learn.
+      </p>
+      <p class="quote">
+        "Nature does not make leaps, and neither should we. One good decision a day can exponentially improve life and possibly extend it."
+      </p>
+    </div>
+  </div>
+
+  <!-- MISSION & VISION -->
+  <div class="mission-vision">
+    <h3>🌍 Mission</h3>
+    <p>
+      To empower people to live well, think deeply, and innovate fearlessly by merging biology, technology, and self-awareness.
+    </p>
+
+    <h3>🔭 Vision</h3>
+    <p>
+      We envision a future where Africa leads the world in ethical biotechnology innovation—where young minds design laboratories from scratch, document discoveries with clarity, build healing tools with code and curiosity, and walk with purpose in a body they understand.
+    </p>
+    <p>
+      A future where education is not just academic, but alive, embodied, intuitive, and practical. A future built one step, one breakthrough, and one good decision at a time.
+    </p>
+  </div>
+
+</section>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section contact">
+            <h4>Contact Us</h4>
+            <p><a href="mailto:mfonnta07@gmail.com?subject=Inquiry&body=Hi%20there!%20I%20would%20like%20to%20know%20more%20about...">Email Us</a></p>
+        </div>
+        <div class="footer-section links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="subscribe.html">Subscribe to Newsletter</a></li>
+            </ul>
+        </div>
+        <div class="footer-section social-media">
+            <h4>Follow Us</h4>
+            <ul class="social-icons">
+                <!-- <li><a href="https://linkedin.com/in/data-network-africa-742653200" target="_blank">LinkedIn</a></li> -->
+                <li><a href="https://www.instagram.com/biocircuitlaboratories/profilecard/?igsh=enRyZjU4NHhjYzZw" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+    <p class="counter"><span id="visit-count" class="highlight">0</span></p>
+
+    <div id="interaction-log" style="margin-top: 30px; font-size: 1.2rem; color: #333;"></div>
+
+    <div class="footer-bottom">
+        <p>© 2024 BioCircuit Laboratories. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
