@@ -121,13 +121,15 @@
   transition: color 0.3s;
 }
 
+.quiz {
+  text-decoration: none;
+}
+
 .fixed-top a:hover {
   color: #FFD700;
 }
 
-footer a:hover {
-  color: #0056b3;
-}
+
 
     @keyframes wave {
       0% {
@@ -149,6 +151,82 @@ footer a:hover {
         width: 90%;
       }
     }
+    footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+footer .what {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* 
+footer a {
+  display: block;
+  color: #007BFF;
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 1rem;
+  transition: color 0.3s;
+
+} */
+
+footer a:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 15px;
+  }
+
+  footer .what {
+    font-size: 1.2rem;
+  }
+
+  footer a {
+    font-size: 0.9rem;
+  }
+}
+
+    /* Wavy Animation */
+    .wave {
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      width: 100%;
+      height: 42%;
+      background: url('drop.webp');
+      animation: wave 5s infinite linear;
+      z-index: 1;
+      opacity: 0.5;
+    }
+
+    .what {
+      text-align: center;
+    padding: 2rem 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3a2d2d;
+    text-decoration: none;
+    }
+
+    @keyframes wave {
+      0% {
+        background-position-x: 0;
+      }
+      100% {
+        background-position-x: 1000px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -156,20 +234,21 @@ footer a:hover {
 
   <section class="container">
     <!-- Jade Package -->
-    <div class="card">
-      <div class="title">A</div>
+    <a href="https://forms.gle/7zD81fDY9upx3TEy5" class="quiz"><div class="card">
+      <div class="title">Quiz</div>
       <div class="content">
         <p><strong></strong></p>
         <ul class="list">
-          <li>One 45-minute Consultation Call</li>
-          <li>Follow-Up Research Results</li>
-          <li>Follow-Up Call - 28 Day Cycle</li>
+          <li>Checkout our Free Quiz</li>
+          <li>Ever wondered if you might be on the spectrum</li>
+          <li>Awareness allows you to harness the perks</li>
         </ul>
       </div>
     </div>
+    </a>
 
     <!-- Sapphire Package -->
-    <div class="card">
+    <!-- <div class="card">
       <div class="title">B</div>
       <div class="content">
         <p><strong></strong></p>
@@ -180,10 +259,10 @@ footer a:hover {
           <li>Map To North-Star</li>
         </ul>
       </div>
-    </div>
+    </div> -->
 
     <!-- Ruby Package -->
-    <div class="card">
+    <!-- <div class="card">
       <div class="title">C</div>
       <div class="content">
         <p><strong></strong></p>
@@ -195,17 +274,21 @@ footer a:hover {
           <li>Break In Emergency Calls</li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </section>
   <div class="fixed-top">
-    <a href="https://selar.co/l78444">Schedule</a>
+    <a href="https://selar.co/l78444">Schedule A Call</a>
   </div>
 
   <footer>
-    <div class="fixed-top">
-        <a href="https://selar.co/l78444">Schedule</a>
-      </div>
+    <p class="what">What To Do</p>
+  <p class="what">  <a href="autism.html" class="case">Case Study on Adult Autism</a></p>
+    <!-- <a href="https://selar.com/l78444"><p class="what">Talk To Us</p></a> -->
+    <!-- <a href="https://www.researchgate.net/publication/389025173_Womb_Intelligence_System_-_The_Womb_As_a_Brain">Case Study on Womb Intelligence System</a>
+    <a href="precisonmedicine.html">Case Study on IBS and PCOS</a> -->
+
     
   </footer>
+  <div class="wave"></div>
 </body>
 </html>
