@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background: #193D4D;
+    color: #111827;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: url('https://biotech-consulting-images.s3.amazonaws.com/hero.jpg') center/cover no-repeat;
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #C4AED6;
+    line-height: 1;
+  }
+  
+  .hero p {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+  }
+  
+  .cta {
+    background: #895CAD;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+  }
+  
+  section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .services .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background: #D8C9E4;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    width: 300px;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .about {
+    color: #D8C9E4;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #DC6AA1;
+  }
+  
+  .about p, .contact p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+  }
+  
+  footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .services .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
