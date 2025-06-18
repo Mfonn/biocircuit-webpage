@@ -13,7 +13,7 @@
   
   header {
     background: url('https://biotech-consulting-images.s3.amazonaws.com/hero.jpg') center/cover no-repeat;
-    padding: 5rem 2rem;
+    padding: 2rem;
     text-align: center;
     color: white;
   }
@@ -46,7 +46,7 @@
   }
   
   section {
-    padding: 4rem 2rem;
+    padding: 2rem;
     max-width: 1000px;
     margin: auto;
     text-align: center;
