@@ -18,6 +18,8 @@ h1 {
     background: #80abc7;
 }
 
+
+
 .landing-page-container {
     width: 100%;
     min-height: 100%;
@@ -356,6 +358,12 @@ h1 {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+
+
+}
+
+#newsbox {
+        background-color: lightgoldenrodyellow;
 }
 
 .service-box::before {
