@@ -1,195 +1,153 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  body {
-    background: #193D4D;
-    color: #111827;
-    line-height: 1.6;
-  }
-  
-  header {
-    background: url('https://biotech-consulting-images.s3.amazonaws.com/hero.jpg') center/cover no-repeat;
-    padding: 2rem;
-    text-align: center;
-    color: white;
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #C4AED6;
-    line-height: 1;
-  }
-  
-  .hero p {
-    max-width: 600px;
-    margin: 0 auto 3rem;
-    font-size: 1.2rem;
-  }
-  
-  .cta {
-    background: #895CAD;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    font-weight: bold;
-  }
-  
-  section {
-    padding: 2rem;
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .services .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-  
-  .card {
-    background: #9D74BE;
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    padding: 1.5rem;
-    width: 300px;
-    transition: transform 0.2s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .card img {
-    width: 100%;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .about {
-    color: #D8C9E4;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #DC6AA1;
-  }
-  
-  .about p, .contact p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 1.1rem;
-  }
-  
-        /* 
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: #f9f9f9;
-    text-align: center;
-  } */
-
-  /* Footer Styles */
-  .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    /* position: fixed; */
-    bottom: 0;
-    width: 100%;
-    height: 12%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+body {
+  background-color: #145247;
+  color: #eef2f3;
+  line-height: 1.7;
 }
 
-.footer-section {
-    margin: 10px 0;
-    flex: 1;
-    min-width: 200px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.footer-section h4 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #A2C3A4;
+/* ---------- HERO ---------- */
+header {
+  padding: 5rem 1.5rem;
+  text-align: center;
 }
 
-.footer-section p,
-.footer-section a {
-    color: #ccc;
-    text-decoration: none;
-    font-size: 14px;
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #d6b5e6;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
-.footer-section a:hover {
-    color: #fff;
-    text-decoration: underline;
+.hero p {
+  max-width: 720px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #e6edf0;
 }
 
-.footer-section ul {
-    list-style: none;
-    padding: 0;
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 4rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
 }
 
-.footer-section ul li {
-    margin: 5px 0;
+h2 {
+  font-size: 2rem;
+  color: #dc6aa1;
+  margin-bottom: 1.5rem;
 }
 
-.footer-section ul li a {
-    color: #ccc;
-    text-decoration: none;
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #dbe4e8;
 }
 
-.footer-section ul li a:hover {
-    color: #fff;
+/* ---------- SERVICES ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
 }
 
-.social-icons li {
-    display: inline;
-    margin: 0 10px;
+.card {
+  background: #143c4b;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+  color: #c4aed6;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #e1e8eb;
+}
+
+/* ---------- ABOUT ---------- */
+.about ul {
+  list-style: none;
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.about li {
+  margin-bottom: 1rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.about li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #dc6aa1;
+}
+
+/* ---------- CTA ---------- */
+.cta {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.7rem;
+  background: #895cad;
+  font-weight: 600;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background: #a87bd6;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #0b2028;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #cfd8dc;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 .footer-bottom {
-    border-top: 1px solid #444;
-    padding-top: 10px;
-    font-size: 12px;
-    color: #bbb;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #aab7bd;
 }
-
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-  
-  @media (max-width: 768px) {
-    .services .cards {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
