@@ -4,6 +4,7 @@ html {
 
 body {
     font-size: 1.4rem; /* =14px */
+    background-color: #145247;
 }
 
 h1 {
@@ -30,7 +31,7 @@ h1 {
     background-position: bottom;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
-    color: #09383E; /* $tiber */
+    color:#E2E6DB; /* $tiber */
 }
 
 .content__wrapper {
@@ -63,7 +64,7 @@ h1 {
 .menu-icon__line {
     width: 1.5rem;
     height: 0.2rem;
-    background-color: #0C383E; /* $elephant */
+    background-color: #E2E6DB; /* $elephant */
     display: block;
 }
 
@@ -72,7 +73,7 @@ h1 {
     content: '';
     width: 1.5rem;
     height: 0.2rem;
-    background-color: #0C383E; /* $elephant */
+    background-color: #E2E6DB; /* $elephant */
     display: inline-block;
     position: relative;
 }
@@ -227,7 +228,7 @@ h1 {
 .ellipses__outer--thick {
     width: 99.5%;
     height: 99.5%;
-    border-color: #09383E transparent; /* $tiber */
+    border-color:#99AB87 transparent; /* $tiber */
     border-width: 2px;
     transform: rotate(-45deg);
     animation: ellipsesRotate 15s ease-in-out infinite;
@@ -390,7 +391,7 @@ h1 {
 
 .service-box h3 {
     font-size: 1.6rem;
-    color: var(--tiber);
+    color: #145247;
     margin: 0 0 1rem;
 }
 
